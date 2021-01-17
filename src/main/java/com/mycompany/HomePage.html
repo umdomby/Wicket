@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html xmlns:wicket="http://wicket.apache.org">
+	<head>
+		<meta charset="utf-8" />
+		<title>Apache Wicket Quickstart</title>
+		<link href='https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:regular,bold' rel='stylesheet' type='text/css' />
+		<link rel="stylesheet" href="style.css" type="text/css" media="screen" title="Stylesheet" />
+	</head>
+	<body>
+		<div id="hd">
+			<div id="logo">
+				<img src="logo.png" width="50px" height="50px" alt="Wicket Logo" />
+				<h1>Apache Wicket</h1>
+			</div>
+		</div>
+		<div id="bd">
+
+			<h2>Congratulations!</h2>
+			<div>
+				<a wicket:id="linkId">From Page</a>
+			</div>
+			<div>
+				<a wicket:id="loginPage">Login Page</a>
+			</div>
+
+<!--Field registration-->
+			<form wicket:id="form">
+				<span wicket:id="name"></span><input type="text" wicket:id="nameText">
+				<br/>
+				<span wicket:id="surname"></span><input type="text" wicket:id="surnameText">
+				<br/>
+				<input type="submit" wicket:id="submit">
+			</form>
+<!--Add variable-->
+			<div wicket:id="messages">
+				Тестовое <span wicket:id="messageID"></span> сообщение
+			</div>
+
+<!--Fragment-->
+			<div wicket:id="content"></div>
+			<wicket:fragment wicket:id="fragment">
+				<div wicket:id="fragmentLabel"></div>
+			</wicket:fragment>
+
+<!--enclosure			-->
+			<wicket:enclosure child="test1">
+				<span wicket:id="test1"></span>
+				<span wicket:id="test2"></span>
+			</wicket:enclosure>
+
+<!--simple-->
+			<div>
+				<span wicket:id="thanks"></span>
+			</div>
+
+		</div>
+
+
+		<div id="ft">
+		</div>
+	</body>
+</html>
